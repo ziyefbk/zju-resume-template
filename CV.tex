@@ -1,6 +1,5 @@
 \documentclass[11pt]{article}
 
-
 \setlength{\parindent}{0pt}
 \usepackage{xltxtra}
 \usepackage{hyperref}
@@ -15,141 +14,125 @@
 \usetikzlibrary{calc}
 \usepackage{fontspec}
 \usepackage{xeCJK}
+\usepackage{makecell}
 \usepackage{enumitem}
-\CJKsetecglue{} %% 取消中文与数字之间的间隙
 
-
-%% 主文档字体设置
 \setmainfont[
     Path = fonts/Main/,
     Extension = .otf,
-    BoldFont = texgyretermes-bold.otf, % 加粗字体
-]{texgyretermes-regular.otf} % 正文字体
+    BoldFont = texgyretermes-bold.otf,
+]{texgyretermes-regular.otf}
 
-% 中文字体设置
 \setCJKmainfont[
     Path = fonts/hansans/,
     Extension = .ttf,
-    BoldFont = NotoSansSC-Bold.ttf, % 加粗字体
-]{NotoSansSC-Regular.otf} % 正文字体
-
+    BoldFont = NotoSansSC-Bold.ttf,
+]{NotoSansSC-Regular.otf}
 
 \usepackage{relsize}
 \usepackage{xspace}
+\usepackage{fontawesome}
 
-% 使用 fontawesome（部分图标）
-\usepackage{fontawesome} 
-
-% A4纸，上下左右边距
 \usepackage[
     a4paper,
-    left=1.2cm,
-    right=1.2cm,
-    top=1.5cm,
-    bottom=1cm,
+    left=1.0cm,
+    right=1.0cm,
+    top=1.2cm,
+    bottom=0.8cm,
     nohead
 ]{geometry}
 
-\renewcommand{\baselinestretch}{1.5} % 行间距设为1.5
+\linespread{1.15}
 
 \usepackage{titlesec}
-\usepackage{enumitem}
-\setlist{noitemsep} % 取消列表项间的额外间距
-%\setlist{nosep} % 取消所有垂直间距
-\setlist[itemize]{topsep=0.25em, leftmargin=*}
-\setlist[enumerate]{topsep=0.25em, leftmargin=*}
+\setlist{noitemsep, parsep=0pt}
+\setlist[itemize]{topsep=0.1em, leftmargin=*, itemsep=0pt}
 
-% --- 用于控制【不同项目之间】的垂直距离 ---
 \newlength{\interProjectSpacing}
-\setlength{\interProjectSpacing}{0.9em} % <--- 在此调整项目之间的距离
+\setlength{\interProjectSpacing}{0.4em}
 \newcommand{\projectsep}{\vspace{\interProjectSpacing}}
 
-% --- 用于控制【项目标题】与下方【项目描述】的距离 ---
 \newlength{\intraProjectTitleSep}
-\setlength{\intraProjectTitleSep}{0.4em} % <--- 在此调整标题和描述的距离
+\setlength{\intraProjectTitleSep}{0.15em}
 \newcommand{\titlebreak}{\\[\intraProjectTitleSep]}
 
-% --- 用于控制【项目描述】与下方【要点列表】的距离 ---
-\newlength{\intraProjectListTopSep}
-\setlength{\intraProjectListTopSep}{0.2em} % <--- 在此调整描述和列表的距离
-
-% =======================================================================
-
-
-\titleformat{\section}         % 定制 \section 命令 
-{\large\bfseries\raggedright} % 将 section 标题设置为大号、粗体且左对齐
-{}{0em}                      % 可用于为所有 section 添加前缀（如“章节...”）
-{}                           % 可用于在标题前插入代码
-[{\color{CVBlue}\titlerule}]  % 在标题后插入一条横线
-\titlespacing*{\section}{0cm}{*1.6}{*1.2}
-
-
+\titleformat{\section}
+{\large\bfseries\raggedright}
+{}{0em}
+{}
+[{\color{CVBlue}\titlerule}]
+\titlespacing*{\section}{0cm}{0.5em}{0.3em}
 
 \begin{document}
 \pagenumbering{gobble}
 
-%%%% 利用tikz来定位照片
-\begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
-  \end{tikzpicture}%
-  %%%% 利用tikz来定位学校Logo，这里只在第一页显示
-  \begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
-  \end{tikzpicture}%
-\centerline{\LARGE\bfseries{胡豆}} 
 
-\centerline{\normalsize{\faPhone\ 111-1111-1111 \quad \faEnvelopeO\ \href{mailto:3230100000@zju.edu.cn}{3230100000@zju.edu.cn}}} 
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor = north west] at ($(current page.north west)+(0.3cm,+0.8cm)$) {\includegraphics[height=5cm]{zju.png}};
+\end{tikzpicture}%
 
-\centerline{\normalsize{\faGithubSquare\ \href{https://github.com/maksymilan}{https://github.com/maksymilan} \quad \faRssSquare\ \href{https://maksymilan.github.io/}{https://maksymilan.github.io}}} 
-    
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
-\textbf{浙江大学} \hfill 2023.9 -- 至今\\[0.5em] % 标题和正文间加一点距离
-CC98烂坑挖掘工程与技术\quad 大二 
-\begin{itemize}[nosep]
-    \item 相关课程：《烂坑挖掘及基础》、《高级挖坑技巧》、《烂坑数理统计》
-\end{itemize}
+\centerline{\LARGE\bfseries{曹天赐}}
+\centerline{\normalsize{\faPhone\ 15556927015 \quad \faWeixin\ 15556927015 \quad \faEnvelopeO\ \href{ziyectc@gmail.com}{ziyectc@gmail.com} \quad \faGithub\ \href{https://github.com/ziyefbk}{ziyefbk}}}
 
-\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
+\section{教育背景}
+浙江大学 控制科学与技术学院 \hfill 2023.9 -- 至今\\
+\textbf{竺可桢学院 工程教育高级班} · 自动化（控制）专业 \hfill 大三\\
+GPA: 3.93/4.0
 
-% --- 第一个项目 ---
-% 将标题行末尾的 \\ 替换为 \titlebreak 命令
-\textbf{98烂坑风控与可视化作战平台} \hfill 2024.08 -- 至今 \titlebreak
-项目描述：为维护cc98社区的讨论纯度、净化“心灵之约”版块风气，本项目旨在对“烂坑”进行科学、严谨的量化分析，并引入\textbf{大语言模型(LLM)}对烂坑帖进行\textbf{自动化情感极性与“离谱指数”标注}。
-% 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
-\begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{数据与后端}：运用 \textbf{Go} 语言及 \textbf{GORM} 框架，实现对全站“烂坑”帖的7x24小时全天候\textbf{抓取}与\textbf{入库}(MySQL)。
-    \item \textbf{可视化前端}：采用原生 \textbf{HTML/CSS/JS} 构建了“烂坑”实时监控\textbf{作战大屏}。实现了坑主成分分析、挖坑热力图、年度烂坑王榜单等\textbf{可视化图表}，并通过 \textbf{AJAX} 异步刷新，确保数据洞察的实时性。
-    \item \textbf{核心产出}：全面掌握了从\textbf{数据采集、清洗、LLM标注到可视化分析}的“反烂坑”全链路技术。
-\end{itemize}
+\section{科研与项目经历}
 
-% 使用 \projectsep 命令来分隔两个项目
+\textbf{实验室科研} \hfill 2024.06 -- 至今 \titlebreak
+参与CCF-A类编程语言顶级会议论文（在投）\\
+\textit{Formalizing the Linux eBPF Core ISA: A Mechanized Operational Semantics and Its Real-World Applications}\\
+研究方向：形式化方法，程序语言理论，ebpf，Rocq
+
+\section{项目经历}
+
+\textbf{Linux内核贡献} \hfill 2025.01 -- 至今 \titlebreak
+为Linux内核提交1个patch（\href{https://github.com/kernel-patches/bpf/commit/9d21199842247ab05c675fb9b6c6ca393a5c0024}{commit 9d21199}），提高BPF verifier数值追踪精度\\
+共同参与patch提交 div \& mod analysis（\href{https://github.com/kernel-patches/bpf/commits/bpf-next_base}{bpf-next\_base}）\projectsep
+
+\textbf{Tnum与Wint数值抽象的Rust实现} \hfill 2025.07 -- 2025.10 \titlebreak
+开源项目复现：ISSTA'25 \& TOPLAS'15，将数值抽象域C++实现迁移至Rust，设计Rust crate支持静态分析与程序验证（\href{https://github.com/ziyefbk/solana-sbpf/tree/main}{项目链接}）
+
 \projectsep
 
-% --- 第二个项目 ---
-\textbf{AIGC驱动的超进化自动挖坑机 (Agent)} \hfill 2025.02 -- 至今 \titlebreak
-项目描述：为探索心灵版规的边界，以及测试版主锁沉反应速度的极限，本项目基于\textbf{多智能体协作(MCP)与LLM}技术，开发了一款能\textbf{自主“挖坑”与“互坑”}的AI Agent。
-\begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{并发与调度}：后端采用 \textbf{Go} 语言，充分利用 \textbf{Goroutine} 和 \textbf{Channel} 的高并发模型，模拟\textbf{用户并发在线}，执行定时挖坑，确保挖坑行动的\textbf{隐蔽性}与\textbf{高效性}。
-    \item \textbf{实时监控与响应}：运用 \textbf{WebSocket} 协议实现了对目标帖子的\textbf{实时监听与交互}。确保在烂坑被识破的第一时间，Agent能光速完成\textbf{“lktp”}或\textbf{反向钓鱼}操作，展现出极高的AI博弈能力。
-    \item \textbf{可视化GUI}：前端使用 \textbf{React} 框架构建了\textbf{后台管理的可视化面板 (Admin Panel)}。可一键下达挖坑指令、动态调整Agent的\textbf{指令}、并实时监控数据。
+\textbf{2025 iGEM 国际遗传工程机器大赛} \hfill 2025.01 -- 2025.11 \titlebreak
+ZJU-China（浙江大学代表队）· 银奖（Silver Medal），负责硬件设计与开发（\href{https://2025.igem.wiki/zju-china/hardware}{硬件设计}）：传感器选型、电路设计、硬件3D建模与硬件调试，同时负责部分网页设计；与生物学、计算机科学团队跨学科协作（\href{https://2025.igem.wiki/zju-china/}{项目主页}）
+
+\projectsep
+
+\textbf{基于生物电路的重金属检测系统} \hfill 2025.01 -- 2025.11 \titlebreak
+2025 iGEM国际遗传工程机器大赛参赛项目（ZJU-China浙江大学代表队），获银奖（Silver Medal）\\
+担任硬件设计与开发负责人：传感器选型、电路设计、硬件3D建模与调试\\
+主导跨学科协作，与生物学、计算机科学团队共同完成项目（\href{https://2025.igem.wiki/zju-china/hardware}{硬件设计}）
+
+\projectsep
+
+\textbf{嵌入式AI系统与模型部署工程实践} \hfill 2024.06 -- 至今 \titlebreak
+融合嵌入式开发与深度学习，完成多个端到端AI系统项目\\
+\textbf{魔杖动作识别控制系统}：基于ESP32与MPU6050构建传感器数据采集系统，训练CNN/Transformer混合模型完成姿态识别，驱动电机控制机器狗完成指定动作指令\\
+\textbf{嵌入式AI系统}：自学Stanford CS231n与MIT TinyML，完成CNN、ResNet、RNN/LSTM、Transformer等模型实现；掌握模型量化、剪枝、知识蒸馏等优化技术，部署至微控制器平台
+
+\section{专业技能}
+\begin{itemize}[nosep, itemsep=0.1em]
+    \item \textbf{编程语言：} C/C++, Python, Rust, MATLAB
+    \item \textbf{AI/机器学习框架：} PyTorch
+    \item \textbf{嵌入式开发：} STM32, ESP32, Arduino, 51, 电路设计与PCB
+    \item \textbf{开发工具：} \LaTeX, Simulink, Git, Linux
+    \item \textbf{专业基础：} 微积分、线性代数、矩阵论、概率论与数理统计、数据结构、机器学习与深度学习、信号分析与处理、自动控制原理
 \end{itemize}
 
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
-\begin{itemize}[nosep]
-    \item \textbf{编程语言：} \textbf{Go}, Python, C++
-    \item \textbf{开发工具：} SSH, Git, Vim, MakeFile,LaTex
-    \item \textbf{操作系统：} Linux
+\section{获奖情况}
+\begin{itemize}[itemsep=0.2em]
+    \item \textbf{2025 iGEM 国际遗传工程机器大赛} 银奖
+    \item \textbf{浙江大学三等奖学金} \hfill 2023-2024学年
+    \item \textbf{浙江大学二等奖学金} \hfill 2024-2025学年
 \end{itemize}
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faList}\ 获奖情况}
-\begin{itemize}
-    \item CC98年度用户 \hfill 2023.12
-    
-\end{itemize}
-    
-\section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 其他}
-\begin{itemize}[parsep=0.5ex]
-    \item \textbf{技术博客：} \href{https://maksymilan.github.io/}{https://maksymilan.github.io/}
-    \item \textbf{GitHub：} \href{https://github.com/maksymilan}{https://github.com/maksymilan} 
-    \item \textbf{英语水平：} CET-4, CET-6
+
+\section{其他}
+\begin{itemize}[itemsep=0.1em]
+    \item \textbf{研究兴趣：} 机器学习、MLsys、形式化方法、程序语言理论
+    \item \textbf{英语水平：} CET-6 512分
 \end{itemize}
 \end{document}
