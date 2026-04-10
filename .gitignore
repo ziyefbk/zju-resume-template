@@ -1,3 +1,17 @@
 *.log
 *.aux
 *.DS_Store
+*.out
+*.synctex.gz
+*.fls
+*.toc
+*.bbl
+*.blg
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+*.nav
+*.snm
+*.vrb

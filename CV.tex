@@ -72,67 +72,73 @@
 \end{tikzpicture}%
 
 \centerline{\LARGE\bfseries{曹天赐}}
-\centerline{\normalsize{\faPhone\ 15556927015 \quad \faWeixin\ 15556927015 \quad \faEnvelopeO\ \href{ziyectc@gmail.com}{ziyectc@gmail.com} \quad \faGithub\ \href{https://github.com/ziyefbk}{ziyefbk}}}
+\centerline{\normalsize{\faPhone\  \faWeixin\ 15556927015  \quad \faEnvelopeO\ \href{ziyectc@gmail.com}{ziyectc@gmail.com} \quad \faGithub\ \href{https://github.com/ziyefbk}{ziyefbk}}}
 
 \section{教育背景}
 浙江大学 控制科学与技术学院 \hfill 2023.9 -- 至今\\
-\textbf{竺可桢学院 工程教育高级班} · 自动化（控制）专业 \hfill 大三\\
-GPA: 3.93/4.0
+\textbf{竺可桢学院 工程教育高级班} · 自动化（控制）专业 \hfill GPA: 3.93/4.0 \hfill 大三 \\
+导师：赵永望~教授~~~CCF杰出会员~|~ARINC653国际操作系统标准委员会委员~|~工信部重大专项首席科学家\\
+\hphantom{导师：}袁胜浩~博士~~~区块链与数据安全全国重点实验室专职研究员
 
 \section{科研与项目经历}
 
-\textbf{实验室科研} \hfill 2024.06 -- 至今 \titlebreak
-参与CCF-A类编程语言顶级会议论文（在投）\\
-\textit{Formalizing the Linux eBPF Core ISA: A Mechanized Operational Semantics and Its Real-World Applications}\\
-研究方向：形式化方法，程序语言理论，ebpf，Rocq
+\textbf{CCF-A类编程语言领域顶会论文在投} \hfill 2024.06 -- 至今 \titlebreak
+• 使用Rocq实现Linux eBPF指令集形式化语义构建\\
+• 通过官方测试以及我们开发的自动化验证工具验证与原实现语义一致性\\
+• 为Linux内核 eBPF提供格式化语义支持，支撑后续安全验证研究
 
-\section{项目经历}
 
-\textbf{Linux内核贡献} \hfill 2025.01 -- 至今 \titlebreak
-为Linux内核提交1个patch（\href{https://github.com/kernel-patches/bpf/commit/9d21199842247ab05c675fb9b6c6ca393a5c0024}{commit 9d21199}），提高BPF verifier数值追踪精度\\
-共同参与patch提交 div \& mod analysis（\href{https://github.com/kernel-patches/bpf/commits/bpf-next_base}{bpf-next\_base}）\projectsep
+\textbf{Linux内核安全关键模块组件研究} \hfill 2025.01 -- 至今 \titlebreak
+• 发现Linux内核中的潜在缺陷和漏洞\\
+• 针对发现的缺陷，设计并实现修复方案，向内核提交9个patch\\
+• 相关修复已合入最新版Linux内核，为Linux社区提供开源贡献
 
-\textbf{Tnum与Wint数值抽象的Rust实现} \hfill 2025.07 -- 2025.10 \titlebreak
-开源项目复现：ISSTA'25 \& TOPLAS'15，将数值抽象域C++实现迁移至Rust，设计Rust crate支持静态分析与程序验证（\href{https://github.com/ziyefbk/solana-sbpf/tree/main}{项目链接}）
 
-\projectsep
+\textbf{基于Rust的论文复现与性能优化} \hfill 2025.02 -- 2025.12 \titlebreak
+• 研究并复现CCF-A类程序分析领域顶级会议ISSTA'25与TOPLAS'15\\
+• 将数值抽象域的C++实现迁移至Rust，通过SIMD并行化与零成本抽象等进行性能优化\\
+• 经基准测试对比，Rust实现较原C++版本提速约40\%\\
+• 发现原代码中存在的区间分析bug，并且已与原作者沟通确认
 
-\textbf{2025 iGEM 国际遗传工程机器大赛} \hfill 2025.01 -- 2025.11 \titlebreak
-ZJU-China（浙江大学代表队）· 银奖（Silver Medal），负责硬件设计与开发（\href{https://2025.igem.wiki/zju-china/hardware}{硬件设计}）：传感器选型、电路设计、硬件3D建模与硬件调试，同时负责部分网页设计；与生物学、计算机科学团队跨学科协作（\href{https://2025.igem.wiki/zju-china/}{项目主页}）
 
-\projectsep
+\textbf{计算机视觉与深度神经网络研究} \hfill 2025.04 -- 2025.08 \titlebreak
+• Image Classification：基于NumPy从零实现kNN、SVM、Softmax分类器及全连接网络，CIFAR-10达50\%准确率\\
+• CNN：实现BatchNorm、Dropout、卷积模块及ResNet-18，在CIFAR-10上达到92\%准确率\\
+• Advanced Vision：实现Transformer图像描述生成、DDPM扩散模型、CLIP对比图文匹配及DINO自监督学习
 
-\textbf{基于生物电路的重金属检测系统} \hfill 2025.01 -- 2025.11 \titlebreak
-2025 iGEM国际遗传工程机器大赛参赛项目（ZJU-China浙江大学代表队），获银奖（Silver Medal）\\
-担任硬件设计与开发负责人：传感器选型、电路设计、硬件3D建模与调试\\
-主导跨学科协作，与生物学、计算机科学团队共同完成项目（\href{https://2025.igem.wiki/zju-china/hardware}{硬件设计}）
 
-\projectsep
+\textbf{深度学习模型压缩与高效部署研究} \hfill 2025.08 -- 2026.01 \titlebreak
+• Pruning：实现CNN权重迭代剪枝，削减80\%参数量的同时 Top-1 准确率下降不超过2\%\\
+• Quantization：将ResNet模型从FP32量化至INT8，设计混合精度量化策略，推理速度提升约3.1倍\\
+• NAS：基于DARTS算法实现神经网络架构自动搜索，在CIFAR-10上搜索得到参数量仅0.5M的轻量化网络\\
+• LLM Compression与Deployment：对LLaMA-2-7B进行4-bit GPTQ量化，笔记本本地部署速度达15 tokens/s
 
-\textbf{嵌入式AI系统与模型部署工程实践} \hfill 2024.06 -- 至今 \titlebreak
-融合嵌入式开发与深度学习，完成多个端到端AI系统项目\\
-\textbf{魔杖动作识别控制系统}：基于ESP32与MPU6050构建传感器数据采集系统，训练CNN/Transformer混合模型完成姿态识别，驱动电机控制机器狗完成指定动作指令\\
-\textbf{嵌入式AI系统}：自学Stanford CS231n与MIT TinyML，完成CNN、ResNet、RNN/LSTM、Transformer等模型实现；掌握模型量化、剪枝、知识蒸馏等优化技术，部署至微控制器平台
 
-\section{专业技能}
+\textbf{嵌入式开发与深度学习：魔杖动作识别与机械狗动作指令控制系统} \hfill 2025.04 -- 2025.12 \titlebreak
+• 基于ESP32与MPU6050构建六轴IMU传感器数据采集系统，完成时序数据清洗、分割与滑窗特征提取\\
+• 设计1-D CNN特征提取和分类模型，在自采多类别动作数据集上达97.3\%识别准确率\\
+• 优化模型参数量并部署至上位PC机完成动作识别，驱动电机完成机器狗指定动作指令\\
+
+% \textbf{基于生物电路的重金属检测系统} \hfill 2025.01 -- 2025.11 \titlebreak
+% • 2025 iGEM国际遗传工程机器大赛参赛项目，获银奖\\
+% • 担任硬件设计与开发负责人，负责传感器选型、电路设计、硬件3D建模与调试，设计高精度荧光检测与分析系统\\
+% • 主导跨学科协作，与生物学、计算机科学团队共同完成项目
+\section{专业知识与技能}
 \begin{itemize}[nosep, itemsep=0.1em]
-    \item \textbf{编程语言：} C/C++, Python, Rust, MATLAB
-    \item \textbf{AI/机器学习框架：} PyTorch
-    \item \textbf{嵌入式开发：} STM32, ESP32, Arduino, 51, 电路设计与PCB
-    \item \textbf{开发工具：} \LaTeX, Simulink, Git, Linux
-    \item \textbf{专业基础：} 微积分、线性代数、矩阵论、概率论与数理统计、数据结构、机器学习与深度学习、信号分析与处理、自动控制原理
+    \item \textbf{专业基础：} 线性代数、矩阵论、概率论与数理统计、数据结构及算法、运筹学、凸优化、机器学习与深度学习
+    \item \textbf{编程语言：} Python (熟悉pytorch深度学习框架), C/C++, Rust, MATLAB (熟练使用simulink进行仿真)
+    \item \textbf{开发技能：} 熟练使用Linux系统进行开发；熟悉使用Git进行版本管理
 \end{itemize}
 
 \section{获奖情况}
-\begin{itemize}[itemsep=0.2em]
+\begin{itemize}[itemsep=0.1em]
     \item \textbf{2025 iGEM 国际遗传工程机器大赛} 银奖
-    \item \textbf{浙江大学三等奖学金} \hfill 2023-2024学年
-    \item \textbf{浙江大学二等奖学金} \hfill 2024-2025学年
+    \item \textbf{浙江大学二、三等奖学金} 
 \end{itemize}
 
 \section{其他}
 \begin{itemize}[itemsep=0.1em]
-    \item \textbf{研究兴趣：} 机器学习、MLsys、形式化方法、程序语言理论
+    \item \textbf{研究兴趣：} 机器学习、MLsys、大模型辅助定理证明、数学定理自动化验证、可信大模型
     \item \textbf{英语水平：} CET-6 512分
 \end{itemize}
 \end{document}
