@@ -3,7 +3,12 @@
 \setlength{\parindent}{0pt}
 \usepackage{xltxtra}
 \usepackage{hyperref}
-\hypersetup{hidelinks}
+\hypersetup{
+    colorlinks = true,
+    linkcolor = CVBlue,
+    urlcolor = CVBlue,
+    citecolor = CVBlue
+}
 \usepackage{url}
 \urlstyle{tt}
 \usepackage{xcolor}
@@ -69,11 +74,11 @@
 
 
 \begin{tikzpicture}[remember picture, overlay]
-    \node[anchor = north west] at ($(current page.north west)+(0.3cm,+0.8cm)$) {\includegraphics[height=5cm]{zju.png}};
+    \node[anchor = north west] at ($(current page.north west)+(0.1cm,+1.0cm)$) {\includegraphics[height=5cm]{zju.png}};
 \end{tikzpicture}%
 
 \centerline{\LARGE\bfseries{曹天赐}}
-\centerline{\normalsize{\faPhone\  \faWeixin\ 15556927015  \quad \faEnvelopeO\ \href{ziyectc@gmail.com}{ziyectc@gmail.com} \quad \faGithub\ \href{https://github.com/ziyefbk}{ziyefbk}}}
+\centerline{\normalsize{\faPhone\  \faWeixin\ 15556927015  \quad \faEnvelopeO\ \href{ziyectc@gmail.com}{ziyectc@gmail.com} \quad \faGithub\ \href{https://github.com/ziyefbk}{ziyefbk} \quad \faGlobe\ \href{https://ziyefbk.github.io}{ziyefbk.github.io}}}
 
 \section{教育背景}
 浙江大学 控制科学与技术学院 \hfill 2023.9 -- 至今\\
@@ -91,16 +96,17 @@
 \projectsep
 
 \textbf{Linux内核安全关键模块组件研究} \hfill 2025.01 -- 至今 \titlebreak
-• 发现Linux内核中的潜在缺陷和漏洞，针对发现的缺陷，设计并实现修复方案\ \hfill \href{https://github.com/kernel-patches/bpf/commit/b2821311abbd05d3340ad7f09fe89f088572b682}{\faGithub\ patch示例}\\
-• 向内核提交4个patch，相关修复已合入最新版Linux内核，为Linux社区提供开源贡献
+• 发现Linux内核中的潜在缺陷和漏洞，针对发现的缺陷，设计并实现修复方案\ \hfill \faGithub\  \href{https://ziyefbk.github.io/portfolio/2025-01-01-linux-kernel-security/}{patch汇总}\\
+• 向内核提交4个patch，相关修复已合入最新版Linux内核，为Linux社区提供开源贡献\\
+• 正在进行BPF 128位乘法指令扩展，为Linux内核eBPF增添有符号/无符号64$\to$128位乘法支持
 
 \projectsep
 
 \textbf{基于Rust的论文复现与性能优化} \hfill 2025.02 -- 2025.05 \titlebreak
-• 研究并复现CCF-A类程序分析领域顶级会议ISSTA'25与TOPLAS'15 \hfill \href{https://github.com/OpenSourceVerif/svm-abstract-domains}{\faGithub\ code}\\
-• 将数值抽象域的C++实现迁移至Rust，通过SIMD并行化与零成本抽象等进行性能优化\\
-• 经基准测试对比，Rust实现较原C++版本提速约40\%\\
-• 发现原代码中存在的区间分析bug，并且已与原作者沟通确认
+• 研究并复现CCF-A类程序分析领域顶级会议ISSTA'25与TOPLAS'15，将数值抽象域的C++实现迁移至Rust\\
+• 通过SIMD并行化与零成本抽象等进行性能优化，经基准测试，较原C++版本提速约40\%\\
+• 发现原代码中存在的区间分析bug，并且已与原作者沟通确认\\
+• 开源三个Rust库：\href{https://github.com/OpenSourceVerif/Tnum-for-Rust}{Tnum-for-Rust}、\href{https://github.com/OpenSourceVerif/Wrapped-Interval-for-Rust}{Wrapped-Interval-for-Rust}、\href{https://github.com/OpenSourceVerif/Reduced-Product-for-Rust}{Reduced-Product-for-Rust}
 
 \section{项目经历}
 
@@ -119,16 +125,16 @@
 
 \projectsep
 
-\textbf{嵌入式开发与深度学习：魔杖动作识别与机械狗动作指令控制系统} \hfill 2025.04 -- 2025.12 \titlebreak
-• 基于MPU6050构建六轴IMU传感器数据采集系统，完成时序数据清洗、分割与滑窗特征提取 \hfill \href{run:doc/slide.pptx}{\faDesktop\ Slide} \\
-• 设计1-D CNN特征提取和分类模型，在自采多类别动作数据集上达97.3\%识别准确率  \hfill \href{run:doc/report.pdf}{\faFileText\ Report} \\
+\textbf{嵌入式开发与深度学习：魔杖动作识别与机械狗动作指令控制系统} \hfill 2025.04 -- 2025.7 \titlebreak
+• 基于MPU6050构建六轴IMU传感器数据采集系统，完成时序数据清洗、分割与滑窗特征提取 \hfill \href{https://ziyefbk.github.io/files/slide.pptx}{\faDesktop\ slides} \\
+• 设计1-D CNN特征提取和分类模型，在自采多类别动作数据集上达97.3\%识别准确率  \hfill \href{https://ziyefbk.github.io/files/report.pdf}{\faFileText\ report} \\
 • 优化模型参数量并部署至上位PC机完成动作识别，驱动电机完成机器狗指定动作指令\\
 
 % \textbf{基于生物电路的重金属检测系统} \hfill 2025.01 -- 2025.11 \titlebreak
 % • 2025 iGEM国际遗传工程机器大赛参赛项目，获银奖\\
 % • 担任硬件设计与开发负责人，负责传感器选型、电路设计、硬件3D建模与调试，设计高精度荧光检测与分析系统\\
 % • 主导跨学科协作，与生物学、计算机科学团队共同完成项目
-
+\vspace{-0.3cm}
 \section{专业知识与技能}
 \begin{itemize}[nosep, itemsep=0.1em]
     \item \textbf{专业基础：} 线性代数、矩阵论、概率论与数理统计、数据结构及算法、运筹学、凸优化、机器学习与深度学习
@@ -139,13 +145,13 @@
 \section{获奖情况}
 \begin{itemize}[itemsep=0.1em]
     \item \textbf{2025 iGEM 国际遗传工程机器大赛} 银奖
-    \item \textbf{浙江大学二、三等奖学金} 
+    \item \textbf{2024、2025浙江大学三等奖学金} 
 \end{itemize}
 
 \section{其他}
 \begin{itemize}[itemsep=0.1em]
     \item \textbf{研究兴趣：} 机器学习、MLsys、大模型辅助定理证明、数学定理自动化验证、可信大模型
-    \item \textbf{英语水平：} CET-6 512分
+    \item \textbf{英语水平：} CET-6 482分
 \end{itemize}
 
 \end{document}
