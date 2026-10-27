@@ -86,6 +86,14 @@
 综合 GPA：5.023~|~综合排名：16/101~|~总学分：180\\
 导师：王聪~百人计划研究员、博士生导师~|~浙江大学控制科学与工程学院
 
+\section{实习经历}
+
+% Audio entry records literature research and experiment design; no training results are claimed.
+\textbf{科大讯飞实习：Audio 基模数据配比与跨规模迁移预研} \hfill 2026.10 \titlebreak
+• 对比DoReMi、RegMix与数据混合律，形成“4B局部搜索＋目标模型校准”路线，明确跨规模迁移的验证边界\\
+• 面向30B-A3B MoE与27B Dense设计迁移实验，明确采样口径、等预算基线及候选排序的复核流程\\
+• 针对MoE能力退化设计修复数据比例扫描与历史回放方案，纳入独立评测及关键能力回退约束
+
 \section{科研经历}
 
 \textbf{LLM Agent工具调用加速与投机解码研究} \hfill 2026.04 -- 至今 \titlebreak
@@ -98,7 +106,7 @@
 \textbf{使用Rocq实现Linux eBPF虚拟机指令集形式化语义构建} \hfill 2025.05 -- 2026.02 \titlebreak
 • 通过官方测试以及我们开发的自动化验证工具验证与原实现语义一致性\\
 • 为Linux内核 eBPF提供形式化语义支持，支撑后续安全验证研究\\
-\textbf{• 论文A Mechanized Operational Semantics and Its Real-World Applications已被OOPSLA'26录用}
+\textbf{• 论文\href{https://doi.org/10.1145/3839449}{A Mechanized Operational Semantics and Its Real-World Applications}已被OOPSLA'26录用}
 
 \projectsep
 
@@ -108,14 +116,6 @@
 • 正在进行BPF 128位乘法指令扩展，为Linux内核eBPF增添有符号/无符号64$\to$128位乘法支持
 
 \projectsep
-
-\textbf{基于Rust的论文复现与性能优化} \hfill 2025.02 -- 2025.05 \titlebreak
-• 研究并复现CCF-A类程序分析领域顶级会议ISSTA'25与TOPLAS'15，将数值抽象域的C++实现迁移至Rust\\
-• 通过SIMD并行化与零成本抽象等进行性能优化，经基准测试，较原C++版本提速约40\%\\
-• 发现原代码中存在的区间分析bug，并且已与原作者沟通确认\\
-• 开源三个Rust库：\href{https://github.com/OpenSourceVerif/Tnum-for-Rust}{Tnum-for-Rust}、\href{https://github.com/OpenSourceVerif/Wrapped-Interval-for-Rust}{Wrapped-Interval-for-Rust}、\href{https://github.com/OpenSourceVerif/Reduced-Product-for-Rust}{Reduced-Product-for-Rust}
-
-\section{项目经历}
 
 \textbf{深度学习模型压缩与高效部署研究} \hfill 2025.08 -- 2026.01 \titlebreak
 • Pruning：实现CNN权重迭代剪枝，削减80\%参数量的同时 Top-1 准确率下降不超过2\%\\
