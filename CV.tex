@@ -89,12 +89,14 @@
 \section{实习经历}
 
 % Audio entry records literature research and experiment design; no training results are claimed.
-\textbf{科大讯飞实习：Audio 基模数据配比与跨规模迁移预研} \hfill 2026.10 \titlebreak
-• 对比DoReMi、RegMix与数据混合律，形成“4B局部搜索＋目标模型校准”路线，明确跨规模迁移的验证边界\\
-• 面向30B-A3B MoE与27B Dense设计迁移实验，明确采样口径、等预算基线及候选排序的复核流程\\
-• 针对MoE能力退化设计修复数据比例扫描与历史回放方案，纳入独立评测及关键能力回退约束
+\textbf{科大讯飞基座模型组实习——Audio 基模数据配比优化与跨规模迁移预研} \hfill 2026.9 -- 2026.10 \titlebreak
+\begingroup\small
+• 调研参考DoReMi、RegMix等文本大模型数据配比优化方法，形成面向\textbf{4B Audio 代理模型的局部搜索与候选筛选方案}。\\
+• 设计候选配比向\textbf{30B-A3B MoE、27B Dense}迁移的验证实验，统一采样口径与预算，用于复核收益方向及候选排序。\\
+• 针对MoE能力退化，设计\textbf{修复数据比例扫描与历史回放方案}，设置原配比等预算对照、独立验收及关键能力保留约束。
+\par\endgroup
 
-\section{科研经历}
+\section{科研与项目经历}
 
 \textbf{LLM Agent工具调用加速与投机解码研究} \hfill 2026.04 -- 至今 \titlebreak
 • 基于DFlash/DSpark在BFCL、$\tau^2$-bench开展token级profiling，统计接受率、熵与验证长度\\
