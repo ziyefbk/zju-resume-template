@@ -48,7 +48,7 @@
     nohead
 ]{geometry}
 
-\linespread{1.1}
+\linespread{1.04}
 
 \usepackage{titlesec}
 \setlist{noitemsep, parsep=0pt}
@@ -91,9 +91,9 @@
 % Audio entry records literature research and experiment design; no training results are claimed.
 \textbf{科大讯飞基座模型组实习——Audio 基模数据配比优化与跨规模迁移预研} \hfill 2026.9 -- 2026.10 \titlebreak
 \begingroup\small
-• 调研参考DoReMi、RegMix等文本大模型数据配比优化方法，形成面向\textbf{4B Audio 代理模型的局部搜索与候选筛选方案}。\\
-• 设计候选配比向\textbf{30B-A3B MoE、27B Dense}迁移的验证实验，统一采样口径与预算，用于复核收益方向及候选排序。\\
-• 针对MoE能力退化，设计\textbf{修复数据比例扫描与历史回放方案}，设置原配比等预算对照、独立验收及关键能力保留约束。
+• \textbf{研究动机：}围绕Audio基模“如何用小规模实验指导大模型数据配比”的训练需求，调研参考DoReMi、RegMix等方法，比较代理重加权、配比回归与混合律的适用条件，提出\textbf{“4B候选筛选＋目标模型校准”}路线。\\
+• \textbf{方法设计：}设计\textbf{4B Audio局部搜索}流程：围绕基线配比逐域上／下调、其余域等比缩放，明确同一checkpoint、数据版本与token预算的对照设置；制定兼顾目标任务表现与关键能力保留的候选筛选规则，并设计\textbf{30B-A3B MoE、27B Dense}各自基线上的等预算复核，检验收益方向及候选排序。\\
+• \textbf{方案产出：}形成涵盖\textbf{候选生成、代理筛选与跨规模复核}的实验方案，明确采样口径、等预算基线及迁移判断标准；针对能力退化场景，补充\textbf{修复数据比例扫描、历史回放及独立验收}流程，为后续配比实验提供实施依据。
 \par\endgroup
 
 \section{科研与项目经历}
@@ -130,7 +130,7 @@
 \textbf{嵌入式开发与深度学习：魔杖动作识别与机械狗动作指令控制系统} \hfill 2025.04 -- 2025.07 \titlebreak
 • 基于MPU6050构建六轴IMU传感器数据采集系统，完成时序数据清洗、分割与滑窗特征提取 \hfill \href{https://ziyefbk.github.io/files/slide.pptx}{\faDesktop\ slides} \\
 • 设计1-D CNN特征提取和分类模型，在自采多类别动作数据集上达97.3\%识别准确率  \hfill \href{https://ziyefbk.github.io/files/report.pdf}{\faFileText\ report} \\
-• 优化模型参数量并部署至上位PC机完成动作识别，驱动电机完成机器狗指定动作指令\\
+• 优化模型参数量并部署至上位PC机完成动作识别，驱动电机完成机器狗指定动作指令
 
 % \textbf{基于生物电路的重金属检测系统} \hfill 2025.01 -- 2025.11 \titlebreak
 % • 2025 iGEM国际遗传工程机器大赛参赛项目，获银奖\\
